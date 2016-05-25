@@ -1,0 +1,18 @@
+{
+    "require": {
+        "twig/twig": "1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "app",
+            "web/models",
+            "panel/models"
+            
+        ],
+        "files":[
+            "config/Config.php"
+            
+        ]
+        
+    }
+}

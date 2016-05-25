@@ -1,0 +1,69 @@
+{% extends 'layout/default/layout.twig' %}
+{% block content %}
+<section class="content-header">
+          <h1>
+            General Form Elements
+            <small>Preview</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Forms</a></li>
+            <li class="active">General Elements</li>
+          </ol>
+        </section>
+<section class="content">
+<!-- general form elements -->
+<div class="row">
+<!-- left column -->
+<div class="col-md-6">
+<div class="box box-primary">
+<div class="box-header with-border">
+  <h3 class="box-title">Quick Example</h3>
+</div><!-- /.box-header -->
+<!-- form start -->
+<form role="form">
+  <div class="box-body">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nombres</label>
+      <input type="text" class="form-control" id="" name="p_nombre" placeholder="Ingrese nombre">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Apellidos</label>
+      <input type="text" class="form-control" id="" placeholder="Apellidos">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">DNI</label>
+      <input type="pastextsword" class="form-control" id="" placeholder="DNI">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Edad</label>
+      <input type="text" class="form-control" id="" placeholder="Edad">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Telefono</label>
+      <input type="text" class="form-control" id="" placeholder="Phone">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Direccione</label>
+      <input type="text" class="form-control" id="" placeholder="Direccion">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Diagnostico</label>
+      <input type="text" class="form-control" id="" placeholder="Diagnostico">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Tratamiento</label>
+      <input type="password" class="form-control" id="" placeholder="Trata">
+    </div>
+    
+  </div><!-- /.box-body -->
+
+  <div class="box-footer">
+    <button type="submit" class="btn  btn-primary btn-flat">Submit</button>
+  </div>
+</form>
+</div><!-- /.box -->
+</div>
+</div>
+</section>
+{% endblock %}
