@@ -11,13 +11,13 @@
 		{
 			parent::__construct();
 			//unset($_SESSION['login']);
-			echo "dad";exit;
-			 echo ($_SESSION['login']);exit;
-			if(!isset($_SESSION['login']))
+			//echo "dad";exit;
+			// echo ($_SESSION['login']);exit;
+			/*if(!isset($_SESSION['login']))
 			{
 				$this->redirect(array("panel","login"));
 				//$this->_view->display('login.twig',array(),'login');
-			}
+			}*/
 		}
 
 		function indexAction(){
