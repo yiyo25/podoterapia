@@ -21,7 +21,7 @@
 		}
 
 		function indexAction(){
-			echo "aaa";
+			//echo "aaa";
 			//Database::hola();
 			/*$user = new Usuario();
 			/*$user->nombre = "Eduardo";
