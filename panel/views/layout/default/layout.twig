@@ -24,6 +24,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           apply the skin class to the body tag so the changes take effect.
     -->
     <link rel="stylesheet" href="{{app.PATH_VIEW}}dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="{{app.PATH_VIEW}}dist/css/skins/_all-skins.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -345,14 +346,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- REQUIRED JS SCRIPTS -->
 
     <!-- jQuery 2.1.4 -->
-    <script src="web/views/index/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="{{app.PATH_VIEW}}plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.5 -->
-    <script src="web/views/index/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{app.PATH_VIEW}}bootstrap/js/bootstrap.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="web/views/index/dist/js/app.min.js"></script>
+    <script src="{{app.PATH_VIEW}}dist/js/app.min.js"></script>
     <!-- DataTables -->
-    <script src="web/views/index/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="web/views/index/plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="{{app.PATH_VIEW}}plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="{{app.PATH_VIEW}}plugins/datatables/dataTables.bootstrap.min.js"></script>
     <script>
       $(function () {
         $("#example1").DataTable();

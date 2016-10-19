@@ -21,7 +21,8 @@
 				$path_cache = PANEL_PATH_VIEW_CACHE;
 				$app['twig']=array(
 								'title' => 'Panel | adminitrador',
-								'PATH_VIEW' =>"http://".$_SERVER['SERVER_NAME']."/panel/views/layout/default/"
+								'PATH_VIEW' =>"http://".$_SERVER['SERVER_NAME']."/panel/views/layout/default/",
+								'SERVER_NAME' =>"http://".$_SERVER['SERVER_NAME']."/panel/"
 						);
 				
 

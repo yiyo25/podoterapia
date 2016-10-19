@@ -11,19 +11,19 @@
 		{
 			parent::__construct();
 			//unset($_SESSION['login']);
-			echo "dad";exit;
+			/*echo "dad";exit;
 			 echo ($_SESSION['login']);exit;
 			if(!isset($_SESSION['login']))
 			{
 				$this->redirect(array("panel","login"));
 				//$this->_view->display('login.twig',array(),'login');
-			}
+			}*/
 		}
 
 		function indexAction(){
 			echo "aaa";
 			//Database::hola();
-			/*$user = new Usuario();
+			$user = new Paciente();
 			/*$user->nombre = "Eduardo";
 			$user->usuario = "yiyito";
 			$user->pass =md5(123456);
@@ -50,12 +50,17 @@
 			//echo $user->nombre;
 			//$user->getTable();
 			//echo "hola desde el index";*/
-			/*$ar=$user::all();
+			$ar=$user::all();
+			
+			foreach ($ar as $value) {
+				echo $value->id;
+			}
+			
 			echo "<pre>";
 			print_r($ar);
-			echo "</pre>";*/
+			echo "</pre>";
 			
-			$this->_view->display('login.twig',array(),'index');
+			//$this->_view->display('login.twig',array(),'index');
 
 		}
 			

@@ -58,6 +58,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         // line 26
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "PATH_VIEW", array()), "html", null, true);
         echo "dist/css/skins/skin-blue.min.css\">
+    <link rel=\"stylesheet\" href=\"";
+        // line 27
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "PATH_VIEW", array()), "html", null, true);
+        echo "dist/css/skins/_all-skins.min.css\">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -299,9 +303,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class=\"content-wrapper\">
         
         ";
-        // line 267
-        $this->displayBlock('content', $context, $blocks);
         // line 268
+        $this->displayBlock('content', $context, $blocks);
+        // line 269
         echo "        
       </div><!-- /.content-wrapper -->
 
@@ -382,14 +386,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- REQUIRED JS SCRIPTS -->
 
     <!-- jQuery 2.1.4 -->
-    <script src=\"web/views/index/plugins/jQuery/jQuery-2.1.4.min.js\"></script>
+    <script src=\"";
+        // line 349
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "PATH_VIEW", array()), "html", null, true);
+        echo "plugins/jQuery/jQuery-2.1.4.min.js\"></script>
     <!-- Bootstrap 3.3.5 -->
-    <script src=\"web/views/index/bootstrap/js/bootstrap.min.js\"></script>
+    <script src=\"";
+        // line 351
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "PATH_VIEW", array()), "html", null, true);
+        echo "bootstrap/js/bootstrap.min.js\"></script>
     <!-- AdminLTE App -->
-    <script src=\"web/views/index/dist/js/app.min.js\"></script>
+    <script src=\"";
+        // line 353
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "PATH_VIEW", array()), "html", null, true);
+        echo "dist/js/app.min.js\"></script>
     <!-- DataTables -->
-    <script src=\"web/views/index/plugins/datatables/jquery.dataTables.min.js\"></script>
-    <script src=\"web/views/index/plugins/datatables/dataTables.bootstrap.min.js\"></script>
+    <script src=\"";
+        // line 355
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "PATH_VIEW", array()), "html", null, true);
+        echo "plugins/datatables/jquery.dataTables.min.js\"></script>
+    <script src=\"";
+        // line 356
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "PATH_VIEW", array()), "html", null, true);
+        echo "plugins/datatables/dataTables.bootstrap.min.js\"></script>
     <script>
       \$(function () {
         \$(\"#example1\").DataTable();
@@ -412,7 +431,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 ";
     }
 
-    // line 267
+    // line 268
     public function block_content($context, array $blocks = array())
     {
     }
@@ -429,7 +448,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     public function getDebugInfo()
     {
-        return array (  416 => 267,  305 => 268,  303 => 267,  59 => 26,  51 => 21,  47 => 20,  38 => 14,  31 => 10,  20 => 1,);
+        return array (  435 => 268,  410 => 356,  406 => 355,  401 => 353,  396 => 351,  391 => 349,  309 => 269,  307 => 268,  63 => 27,  59 => 26,  51 => 21,  47 => 20,  38 => 14,  31 => 10,  20 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -458,6 +477,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 /*           apply the skin class to the body tag so the changes take effect.*/
 /*     -->*/
 /*     <link rel="stylesheet" href="{{app.PATH_VIEW}}dist/css/skins/skin-blue.min.css">*/
+/*     <link rel="stylesheet" href="{{app.PATH_VIEW}}dist/css/skins/_all-skins.min.css">*/
 /* */
 /*     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->*/
 /*     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->*/
@@ -779,14 +799,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 /*     <!-- REQUIRED JS SCRIPTS -->*/
 /* */
 /*     <!-- jQuery 2.1.4 -->*/
-/*     <script src="web/views/index/plugins/jQuery/jQuery-2.1.4.min.js"></script>*/
+/*     <script src="{{app.PATH_VIEW}}plugins/jQuery/jQuery-2.1.4.min.js"></script>*/
 /*     <!-- Bootstrap 3.3.5 -->*/
-/*     <script src="web/views/index/bootstrap/js/bootstrap.min.js"></script>*/
+/*     <script src="{{app.PATH_VIEW}}bootstrap/js/bootstrap.min.js"></script>*/
 /*     <!-- AdminLTE App -->*/
-/*     <script src="web/views/index/dist/js/app.min.js"></script>*/
+/*     <script src="{{app.PATH_VIEW}}dist/js/app.min.js"></script>*/
 /*     <!-- DataTables -->*/
-/*     <script src="web/views/index/plugins/datatables/jquery.dataTables.min.js"></script>*/
-/*     <script src="web/views/index/plugins/datatables/dataTables.bootstrap.min.js"></script>*/
+/*     <script src="{{app.PATH_VIEW}}plugins/datatables/jquery.dataTables.min.js"></script>*/
+/*     <script src="{{app.PATH_VIEW}}plugins/datatables/dataTables.bootstrap.min.js"></script>*/
 /*     <script>*/
 /*       $(function () {*/
 /*         $("#example1").DataTable();*/

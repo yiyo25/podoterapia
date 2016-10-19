@@ -2,8 +2,7 @@
 {% block content %}
 <section class="content-header">
           <h1>
-            General Form Elements
-            <small>Preview</small>
+            {{ title }}</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -18,42 +17,42 @@
 <div class="col-md-6">
 <div class="box box-primary">
 <div class="box-header with-border">
-  <h3 class="box-title">Quick Example</h3>
+  <h3 class="box-title">{{ titleform }}</h3>
 </div><!-- /.box-header -->
 <!-- form start -->
-<form role="form">
+<form role="form" method="POST" action="">
   <div class="box-body">
     <div class="form-group">
-      <label for="exampleInputEmail1">Nombres</label>
+      <label for="inputName">Nombres</label>
       <input type="text" class="form-control" id="" name="p_nombre" placeholder="Ingrese nombre">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Apellidos</label>
-      <input type="text" class="form-control" id="" placeholder="Apellidos">
+      <label for="inputApellido">Apellidos</label>
+      <input type="text" class="form-control" id="" name="p_apellidos" placeholder="Apellidos">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">DNI</label>
-      <input type="pastextsword" class="form-control" id="" placeholder="DNI">
+      <label for="inputdni">DNI</label>
+      <input type="text" class="form-control" id="" name="p_dni" placeholder="DNI">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Edad</label>
-      <input type="text" class="form-control" id="" placeholder="Edad">
+      <label for="inputedad">Edad</label>
+      <input type="text" class="form-control" id="" name="p_edad" placeholder="Edad">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Telefono</label>
-      <input type="text" class="form-control" id="" placeholder="Phone">
+      <label for="inputfono">Telefono</label>
+      <input type="text" class="form-control" id="" name="p_phone" placeholder="Phone">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Direccione</label>
-      <input type="text" class="form-control" id="" placeholder="Direccion">
+      <label for="exampleInputPassword1">Direccion</label>
+      <input type="text" class="form-control" id="" name="p_dir" placeholder="Direccion">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Diagnostico</label>
-      <input type="text" class="form-control" id="" placeholder="Diagnostico">
+      <input type="text" class="form-control" id="" name="p_diag" placeholder="Diagnostico">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Tratamiento</label>
-      <input type="password" class="form-control" id="" placeholder="Trata">
+      <input type="text" class="form-control" id="" name="p_tra" placeholder="Trata">
     </div>
     
   </div><!-- /.box-body -->

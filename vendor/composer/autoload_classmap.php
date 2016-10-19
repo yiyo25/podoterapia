@@ -12,6 +12,7 @@ return array(
     'Database' => $baseDir . '/app/Database.php',
     'Model' => $baseDir . '/app/Model.php',
     'ORM' => $baseDir . '/app/ORM.php',
+    'Paciente' => $baseDir . '/panel/models/Paciente.php',
     'Request' => $baseDir . '/app/Request.php',
     'Singleton' => $baseDir . '/app/Singleton.php',
     'Usuario' => $baseDir . '/web/models/Usuario.php',

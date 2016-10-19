@@ -30,8 +30,10 @@ class __TwigTemplate_c1f6109c431b0433700048fb5f63a23da8cafd2e07b1bae3e6939fe49e4
         // line 3
         echo "<section class=\"content-header\">
           <h1>
-            General Form Elements
-            <small>Preview</small>
+            ";
+        // line 5
+        echo twig_escape_filter($this->env, (isset($context["title"]) ? $context["title"] : null), "html", null, true);
+        echo "</small>
           </h1>
           <ol class=\"breadcrumb\">
             <li><a href=\"#\"><i class=\"fa fa-dashboard\"></i> Home</a></li>
@@ -46,42 +48,45 @@ class __TwigTemplate_c1f6109c431b0433700048fb5f63a23da8cafd2e07b1bae3e6939fe49e4
 <div class=\"col-md-6\">
 <div class=\"box box-primary\">
 <div class=\"box-header with-border\">
-  <h3 class=\"box-title\">Quick Example</h3>
+  <h3 class=\"box-title\">";
+        // line 20
+        echo twig_escape_filter($this->env, (isset($context["titleform"]) ? $context["titleform"] : null), "html", null, true);
+        echo "</h3>
 </div><!-- /.box-header -->
 <!-- form start -->
-<form role=\"form\">
+<form role=\"form\" method=\"POST\" action=\"\">
   <div class=\"box-body\">
     <div class=\"form-group\">
-      <label for=\"exampleInputEmail1\">Nombres</label>
+      <label for=\"inputName\">Nombres</label>
       <input type=\"text\" class=\"form-control\" id=\"\" name=\"p_nombre\" placeholder=\"Ingrese nombre\">
     </div>
     <div class=\"form-group\">
-      <label for=\"exampleInputPassword1\">Apellidos</label>
-      <input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Apellidos\">
+      <label for=\"inputApellido\">Apellidos</label>
+      <input type=\"text\" class=\"form-control\" id=\"\" name=\"p_apellidos\" placeholder=\"Apellidos\">
     </div>
     <div class=\"form-group\">
-      <label for=\"exampleInputPassword1\">DNI</label>
-      <input type=\"pastextsword\" class=\"form-control\" id=\"\" placeholder=\"DNI\">
+      <label for=\"inputdni\">DNI</label>
+      <input type=\"text\" class=\"form-control\" id=\"\" name=\"p_dni\" placeholder=\"DNI\">
     </div>
     <div class=\"form-group\">
-      <label for=\"exampleInputPassword1\">Edad</label>
-      <input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Edad\">
+      <label for=\"inputedad\">Edad</label>
+      <input type=\"text\" class=\"form-control\" id=\"\" name=\"p_edad\" placeholder=\"Edad\">
     </div>
     <div class=\"form-group\">
-      <label for=\"exampleInputPassword1\">Telefono</label>
-      <input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Phone\">
+      <label for=\"inputfono\">Telefono</label>
+      <input type=\"text\" class=\"form-control\" id=\"\" name=\"p_phone\" placeholder=\"Phone\">
     </div>
     <div class=\"form-group\">
-      <label for=\"exampleInputPassword1\">Direccione</label>
-      <input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Direccion\">
+      <label for=\"exampleInputPassword1\">Direccion</label>
+      <input type=\"text\" class=\"form-control\" id=\"\" name=\"p_dir\" placeholder=\"Direccion\">
     </div>
     <div class=\"form-group\">
       <label for=\"exampleInputPassword1\">Diagnostico</label>
-      <input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Diagnostico\">
+      <input type=\"text\" class=\"form-control\" id=\"\" name=\"p_diag\" placeholder=\"Diagnostico\">
     </div>
     <div class=\"form-group\">
       <label for=\"exampleInputPassword1\">Tratamiento</label>
-      <input type=\"password\" class=\"form-control\" id=\"\" placeholder=\"Trata\">
+      <input type=\"text\" class=\"form-control\" id=\"\" name=\"p_tra\" placeholder=\"Trata\">
     </div>
     
   </div><!-- /.box-body -->
@@ -109,15 +114,14 @@ class __TwigTemplate_c1f6109c431b0433700048fb5f63a23da8cafd2e07b1bae3e6939fe49e4
 
     public function getDebugInfo()
     {
-        return array (  31 => 3,  28 => 2,  11 => 1,);
+        return array (  53 => 20,  35 => 5,  31 => 3,  28 => 2,  11 => 1,);
     }
 }
 /* {% extends 'layout/default/layout.twig' %}*/
 /* {% block content %}*/
 /* <section class="content-header">*/
 /*           <h1>*/
-/*             General Form Elements*/
-/*             <small>Preview</small>*/
+/*             {{ title }}</small>*/
 /*           </h1>*/
 /*           <ol class="breadcrumb">*/
 /*             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>*/
@@ -132,42 +136,42 @@ class __TwigTemplate_c1f6109c431b0433700048fb5f63a23da8cafd2e07b1bae3e6939fe49e4
 /* <div class="col-md-6">*/
 /* <div class="box box-primary">*/
 /* <div class="box-header with-border">*/
-/*   <h3 class="box-title">Quick Example</h3>*/
+/*   <h3 class="box-title">{{ titleform }}</h3>*/
 /* </div><!-- /.box-header -->*/
 /* <!-- form start -->*/
-/* <form role="form">*/
+/* <form role="form" method="POST" action="">*/
 /*   <div class="box-body">*/
 /*     <div class="form-group">*/
-/*       <label for="exampleInputEmail1">Nombres</label>*/
+/*       <label for="inputName">Nombres</label>*/
 /*       <input type="text" class="form-control" id="" name="p_nombre" placeholder="Ingrese nombre">*/
 /*     </div>*/
 /*     <div class="form-group">*/
-/*       <label for="exampleInputPassword1">Apellidos</label>*/
-/*       <input type="text" class="form-control" id="" placeholder="Apellidos">*/
+/*       <label for="inputApellido">Apellidos</label>*/
+/*       <input type="text" class="form-control" id="" name="p_apellidos" placeholder="Apellidos">*/
 /*     </div>*/
 /*     <div class="form-group">*/
-/*       <label for="exampleInputPassword1">DNI</label>*/
-/*       <input type="pastextsword" class="form-control" id="" placeholder="DNI">*/
+/*       <label for="inputdni">DNI</label>*/
+/*       <input type="text" class="form-control" id="" name="p_dni" placeholder="DNI">*/
 /*     </div>*/
 /*     <div class="form-group">*/
-/*       <label for="exampleInputPassword1">Edad</label>*/
-/*       <input type="text" class="form-control" id="" placeholder="Edad">*/
+/*       <label for="inputedad">Edad</label>*/
+/*       <input type="text" class="form-control" id="" name="p_edad" placeholder="Edad">*/
 /*     </div>*/
 /*     <div class="form-group">*/
-/*       <label for="exampleInputPassword1">Telefono</label>*/
-/*       <input type="text" class="form-control" id="" placeholder="Phone">*/
+/*       <label for="inputfono">Telefono</label>*/
+/*       <input type="text" class="form-control" id="" name="p_phone" placeholder="Phone">*/
 /*     </div>*/
 /*     <div class="form-group">*/
-/*       <label for="exampleInputPassword1">Direccione</label>*/
-/*       <input type="text" class="form-control" id="" placeholder="Direccion">*/
+/*       <label for="exampleInputPassword1">Direccion</label>*/
+/*       <input type="text" class="form-control" id="" name="p_dir" placeholder="Direccion">*/
 /*     </div>*/
 /*     <div class="form-group">*/
 /*       <label for="exampleInputPassword1">Diagnostico</label>*/
-/*       <input type="text" class="form-control" id="" placeholder="Diagnostico">*/
+/*       <input type="text" class="form-control" id="" name="p_diag" placeholder="Diagnostico">*/
 /*     </div>*/
 /*     <div class="form-group">*/
 /*       <label for="exampleInputPassword1">Tratamiento</label>*/
-/*       <input type="password" class="form-control" id="" placeholder="Trata">*/
+/*       <input type="text" class="form-control" id="" name="p_tra" placeholder="Trata">*/
 /*     </div>*/
 /*     */
 /*   </div><!-- /.box-body -->*/

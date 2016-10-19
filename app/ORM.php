@@ -10,9 +10,10 @@
 		private static $primary_key;
 		function __construct()
 		{
-			self::$primary_key= $this->_primary_key;	
+			//self::$primary_key= $this->_primary_key;	
 			self::getConexion();
 
+			//echo self::$primary_key;
 		}
 
 		public static function getConexion(){
@@ -22,11 +23,12 @@
 	    public static function getDesconectar(){
 	        self::$cnx = null;
 	    }
-		public static function create()
+		public  function create()
 		{
 			
-			 $values =  static::getColumnas();
-			 //print_r($values);exit;
+			 $values =  $this->getColumnas();
+			 
+			//print_r($values);exit;
 	        $filtered = null; // una variable que va almacenar las columnas
 	        foreach ($values as $key => $value) {
 	        	//echo $value;
@@ -67,9 +69,9 @@
 	        }
 		}
 
-		public static function update(){
+		public  function update(){
 			// guardamos las columnas 
-			$values = static::getColumnas();
+			$values = $this->getColumnas();
 			$id = $values[0];
 			$filtered = null;
 			/*echo "<pre>";
@@ -119,9 +121,9 @@
 		}
 
 		public static function all(){
-	        $query = "SELECT * FROM ". static ::$table ;
+	        $query = "SELECT * FROM ". static::$table ;
 	        //echo $query;
-	        $class = get_called_class();
+	        $class= get_called_class();
 	        self::getConexion();
 	        $res = self::$cnx->prepare($query);
 	        //$res->setFetchMode( PDO::FETCH_CLASS, $class);
@@ -129,16 +131,18 @@
 	        //$filas = $res->fetch();
 	        //echo count($filas);
 	        $arr = array();
+
 	        foreach($res as $row){
-	            $obj = new $class($row);
-	            array_push($arr,$obj);
+	        	
+	            $objs= new $class($row);
+	            array_push($arr,$objs);
 	        }
-	        self::getDesconectar();
+	        //self::getDesconectar();
 	        return $arr;
 	    }
 
 	    public static function where($columna,$valor){
-	        $query = "SELECT * FROM ". static ::$table ." WHERE ".$columna." = :".$columna;
+	        $query = "SELECT * FROM ". static::$table ." WHERE ".$columna." = :".$columna;
 	        //echo $query;exit;
 	        $class = get_called_class();
 	        //echo $class;exit;
@@ -147,18 +151,21 @@
 	        $res->bindParam(":".$columna,$valor);
 	        //$res->setFetchMode( PDO::FETCH_CLASS, $class);
 	        $res->execute();
-	        $obj = []; // ----
+	        $arr = array();
+
 	        foreach($res as $row){
-	            $obj[] = new $class($row);
+	        	
+	            $objs= new $class($row);
+	            array_push($arr,$objs);
 	        }
-	        self::getDesconectar();
-	        return $obj;
+	        //self::getDesconectar();
+	        return $arr;
 	    }
 
 	    public static function find($id){
 	        //echo get_called_class();
-	        $resultado = self::where(static ::$_primary_key,$id);
-	       // print_r($resultado);
+	        $resultado = self::where(static::$_primary_key,$id);
+	        //print_r($resultado);exit;
 	        if(count($resultado)){
 	            return $resultado[0];
 	        }else{
