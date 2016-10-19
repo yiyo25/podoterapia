@@ -30,7 +30,8 @@
 				$valores[$key]['pa_diagnostico']=$value->pa_diagnostico;
 	
 			}
-			$pac_param=array("pacAll"=>$valores);
+			$pac_param=array("pacAll"=>$valores,
+                                        "title"=>"Lista de Pacientes");
 			/*echo "<pre>";
 			print_r($valores);
 			echo "</pre>";

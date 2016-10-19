@@ -44,7 +44,10 @@ class __TwigTemplate_9fda4f6c124b0532d827a6199d588eb2633123ea72ac5c142ce94aa1c13
       <div class=\"col-xs-12\">
         <div class=\"box\">
           <div class=\"box-header\">
-            <h3 class=\"box-title\">Data Table With Full Features </h3>
+            <h3 class=\"box-title\">";
+        // line 19
+        echo twig_escape_filter($this->env, (isset($context["title"]) ? $context["title"] : null), "html", null, true);
+        echo "</h3>
             <a href=\"";
         // line 20
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "SERVER_NAME", array()), "html", null, true);
@@ -121,7 +124,7 @@ class __TwigTemplate_9fda4f6c124b0532d827a6199d588eb2633123ea72ac5c142ce94aa1c13
 
     public function getDebugInfo()
     {
-        return array (  101 => 45,  92 => 42,  88 => 41,  84 => 40,  80 => 39,  76 => 38,  73 => 37,  69 => 36,  50 => 20,  31 => 3,  28 => 2,  11 => 1,);
+        return array (  104 => 45,  95 => 42,  91 => 41,  87 => 40,  83 => 39,  79 => 38,  76 => 37,  72 => 36,  53 => 20,  49 => 19,  31 => 3,  28 => 2,  11 => 1,);
     }
 }
 /* {% extends 'layout/default/layout.twig' %}*/
@@ -142,7 +145,7 @@ class __TwigTemplate_9fda4f6c124b0532d827a6199d588eb2633123ea72ac5c142ce94aa1c13
 /*       <div class="col-xs-12">*/
 /*         <div class="box">*/
 /*           <div class="box-header">*/
-/*             <h3 class="box-title">Data Table With Full Features </h3>*/
+/*             <h3 class="box-title">{{title}}</h3>*/
 /*             <a href="{{app.SERVER_NAME}}paciente/insertar.html" class="btn btn-primary pull-right">Nuevo</a>*/
 /*           </div><!-- /.box-header -->*/
 /*           <div class="box-body">*/
