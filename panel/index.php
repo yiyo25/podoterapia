@@ -9,7 +9,12 @@
 	require_once "../vendor/autoload.php";
 	
 	try {
+
 		session_start();
+		$singleton =  Singleton::getInstancia();
+		$singleton->_request = new Request();
+		$singleton->_db = new Database();
+		
 		Bootstrap::run(new Request(),"panel");
 	} catch (Exception $e) {
 		echo $e->getMessage();

@@ -10,13 +10,15 @@
 		private  $data = array();
 	    protected static $table;
 	    public static $_primary_key;
-	    //private $_registry;
-	    //protected $_db;
+	    private $_registry;
+    	protected $_db;
+    
 	    function __construct($data = null)
 	    {
 	    	
 	       	$this->data = $data;
-
+	       	$this->_registry = Singleton::getInstancia();
+        	$this->_db = $this->_registry->_db;
 
 	       	//$this->datos = $data;
 	    

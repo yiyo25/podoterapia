@@ -14,11 +14,11 @@
 		/***************** Intancia unica de clase******************/
 
 		session_start();
-		//$singleton =  Singleton::getInstancia();
-		
-		//$singleton->_db = new Database(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHAR);
-		//var_dump($singleton);exit;
-		Bootstrap::run(new Request());
+		$singleton =  Singleton::getInstancia();
+		$singleton->_request = new Request();
+		$singleton->_db = new Database();
+
+		Bootstrap::run($singleton->_request);
 	} catch (Exception $e) {
 		echo $e->getMessage();
 	}

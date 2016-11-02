@@ -35,11 +35,11 @@
 	    /*
 	    */
 
-	    public static function select($sql,$array=array(),$fetchMode = PDO::FETCH_ASSOC){
+	    public  function selected($sql="",$array=array(),$fetchMode = PDO::FETCH_ASSOC){
 
 	    	// preparar nuestras sentencias
 
-	    	$sth = $this->prepare($sql);
+	    	/*$sth = $this->prepare($sql);
 
 	    	foreach ($array as $key => $value) {
 	    		$sth->binValue("$key",$value);
@@ -47,7 +47,9 @@
 
 	    	$sth->execute();
 
-	    	return $sth->fetchAll($fetchMode);
+	    	return $sth->fetchAll($fetchMode);*/
+
+	    	echo "sdfdsf";
 
 	    }
 

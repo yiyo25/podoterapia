@@ -7,11 +7,12 @@
 	class Controller
 	{
 		protected $_view ;
-		protected $_DB;
+		private $_registry;
+    	protected $_db;
 		public function __construct()
 		{
-			//$singleton = new Singleton::getInstancia();
-			//$this->_db = $singleton->_db;
+			$this->_registry = Singleton::getInstancia();
+			$this->_db = $this->_registry->_db;
 			$this->_view = new View(new Request());
 		}
 
