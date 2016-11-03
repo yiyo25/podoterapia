@@ -16,7 +16,7 @@
 		session_start();
 		$singleton =  Singleton::getInstancia();
 		$singleton->_request = new Request();
-		$singleton->_db = new Database();
+		//$singleton->_db = new Database();
 
 		Bootstrap::run($singleton->_request);
 	} catch (Exception $e) {

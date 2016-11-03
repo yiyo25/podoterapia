@@ -3,7 +3,7 @@
 	/**
 	* 
 	*/
-	class ORM extends Database
+	class ORM 
 	{
 		protected static $cnx;
 		//protected static $table;
@@ -11,7 +11,7 @@
 		function __construct()
 		{
 			//self::$primary_key= $this->_primary_key;	
-			self::getConexion();
+			//self::getConexion();
 
 			//echo self::$primary_key;
 		}

@@ -5,22 +5,24 @@
 	*/
 	class Database //extends PDO
 	{
-
-		/*public function __construct($host, $dbname, $user, $pass, $char) {
-	        parent::__construct(
-	                'mysql:host=' . $host .
-	                ';dbname=' . $dbname,
-	                $user, 
-	                $pass, 
+		private $cn;
+		private static $instancia;
+		private function __construct() {
+	         try {
+	            $this->cn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PASS,
 	                array(
-	                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES ' . $char
+	                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES ' . DB_CHAR
 	                    ));
-	                
-	    }*/
+	           
+	           
+	        }catch (PDOException $ex){
+	            die($ex->getMessage());
+	        }       
+	    }
 
 
 		public static function conectar(){
-	        try {
+	        /*try {
 	            $cn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PASS,
 	                array(
 	                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES ' . DB_CHAR
@@ -29,7 +31,13 @@
 	            return $cn;
 	        }catch (PDOException $ex){
 	            die($ex->getMessage());
-	        }
+	        }*/
+
+	        if (!isset(self::$instancia)) {
+	            $miclase = __CLASS__;
+	            self::$instancia = new $miclase;
+	        } 
+	        return self::$instancia;
 	    }
 
 	    /*
@@ -39,7 +47,7 @@
 
 	    	// preparar nuestras sentencias
 
-	    	/*$sth = $this->prepare($sql);
+	    	$sth = $this->prepare($sql);
 
 	    	foreach ($array as $key => $value) {
 	    		$sth->binValue("$key",$value);
@@ -47,11 +55,16 @@
 
 	    	$sth->execute();
 
-	    	return $sth->fetchAll($fetchMode);*/
+	    	return $sth->fetchAll($fetchMode);
 
-	    	echo "sdfdsf";
+	    	//echo "sdfdsf";
 
 	    }
+
+	    /*function prepare($sql)
+	    {
+	    	return $this->cn->prepare($sql);
+	    }*/
 
 	    public static function hola()
 	    {
